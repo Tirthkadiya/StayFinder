@@ -23,8 +23,7 @@ const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
 // MONGODB ATLAS Server
-const MONGO_URL =
-    process.env.ATLASDB_URL || "mongodb://127.0.0.1:27017/wanderlust";
+const MONGO_URL = process.env.ATLASDB_URL || "mongodb://127.0.0.1:27017/wanderlust";
 
 main()
     .then(() => {
@@ -43,13 +42,13 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
-app.use(express.static(path.join(__dirname, "/public")));
+// app.set("views", path.join(__dirname, "views"));
+
+app.set("views", path.join(__dirname, "../frontend/views"));
+app.use(express.static(path.join(__dirname, "../frontend/public")));
 
 const store = MongoStore.create({
     mongoUrl: MONGO_URL,
-    // crypto: {
-    //     secret: process.env.SECRET,
-    // },
     touchAfter: 24 * 3600,
 });
 
