@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://stay-finder-backend-umber.vercel.app";
 
 function Search() {
   const [searchParams] = useSearchParams();

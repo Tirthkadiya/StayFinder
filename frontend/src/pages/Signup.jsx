@@ -18,7 +18,7 @@ const Signup = ({ setCurrUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/signup', formData, {
+      const res = await axios.post('https://stay-finder-backend-umber.vercel.app/signup', formData, {
         withCredentials: true 
       });
 

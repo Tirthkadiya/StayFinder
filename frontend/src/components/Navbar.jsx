@@ -19,7 +19,7 @@ const Navbar = ({ currUser }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
+      await axios.post("https://stay-finder-backend-umber.vercel.app/logout", {}, { withCredentials: true });
       
       navigate("/listings", { 
         state: { success: "You have been logged out successfully!" } 

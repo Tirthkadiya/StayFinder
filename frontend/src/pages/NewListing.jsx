@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://stay-finder-backend-umber.vercel.app";
 
 const NewListing = () => {
   const navigate = useNavigate();

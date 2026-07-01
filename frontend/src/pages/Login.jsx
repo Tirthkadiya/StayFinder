@@ -15,7 +15,7 @@ const Login = ({ setCurrUser }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/login",
+        "https://stay-finder-backend-umber.vercel.app/login",
         credentials,
         {
           withCredentials: true,

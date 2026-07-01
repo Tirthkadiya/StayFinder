@@ -86,7 +86,8 @@ function Booking({ listing }) {
     setLoading(true); 
     try {
       await axios.post(
-        `http://localhost:3000/booking/${listing._id}`,
+        // `http://localhost:3000/booking/${listing._id}`,
+        `https://stay-finder-backend-umber.vercel.app/booking/${listing._id}`,
         formData,
         { withCredentials: true } 
       );

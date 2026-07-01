@@ -31,7 +31,7 @@ const ResetPassword = () => {
       setLoading(true);
 
       const res = await axios.post(
-        `http://localhost:3000/reset-password/${token}`,
+        `https://stay-finder-backend-umber.vercel.app/reset-password/${token}`,
         {
           password,
         }

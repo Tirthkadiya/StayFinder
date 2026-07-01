@@ -14,7 +14,7 @@ import axios from "axios";
 import "../assets/rating.css";
 import Booking from "./Booking";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://stay-finder-backend-umber.vercel.app";
 
 const ShowListing = () => {
   const { id } = useParams();

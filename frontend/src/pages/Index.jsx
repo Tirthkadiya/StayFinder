@@ -27,7 +27,7 @@ const Index = () => {
     const fetchListings = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/listings",
+          "https://stay-finder-backend-umber.vercel.app/listings",
           {
             withCredentials: true,
           }
