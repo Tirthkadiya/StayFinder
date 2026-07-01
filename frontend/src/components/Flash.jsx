@@ -28,33 +28,3 @@ const Flash = ({ success, error }) => {
 };
 
 export default Flash;
-
-
-
-// const Flash = ({ success, error }) => {
-//   useEffect(() => {
-//     if (success) {
-//       Swal.fire({
-//         icon: "success",
-//         title: "Success",
-//         text: success,
-//         timer: 3000,
-//         showConfirmButton: false,
-//       });
-//     }
-
-//     if (error) {
-//       Swal.fire({
-//         icon: "error",
-//         title: "Error",
-//         text: error,
-//         timer: 3000,
-//         showConfirmButton: false,
-//       });
-//     }
-//   }, [success, error]);
-
-//   return null; 
-// };
-
-// export default Flash;
