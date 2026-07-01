@@ -18,8 +18,8 @@ function Booking({ listing }) {
     if (!formData.checkIn || !formData.checkOut) return 0;
     const checkInDate  = new Date(formData.checkIn);
     const checkOutDate = new Date(formData.checkOut);
-    const diffMs       = checkOutDate - checkInDate;         // difference in milliseconds
-    const diffDays     = diffMs / (1000 * 60 * 60 * 24);    // convert ms → days
+    const diffMs       = checkOutDate - checkInDate;         
+    const diffDays     = diffMs / (1000 * 60 * 60 * 24);    
     return Math.max(0, Math.floor(diffDays));
   };
 
@@ -29,11 +29,10 @@ function Booking({ listing }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // Spread the old values and overwrite only the field that changed
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Returns an error message string, or null if everything is valid
+  
   const validate = () => {
     const { checkIn, checkOut, guests } = formData;
 
@@ -86,13 +85,12 @@ function Booking({ listing }) {
     setLoading(true); 
     try {
       await axios.post(
-        // `http://localhost:3000/booking/${listing._id}`,
         `https://stay-finder-backend-umber.vercel.app/booking/${listing._id}`,
         formData,
         { withCredentials: true } 
       );
 
-      // Success!
+      
       Swal.fire({
         icon: "success",
         title: "Booking Confirmed! 🎉",

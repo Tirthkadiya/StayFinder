@@ -103,7 +103,6 @@ const Index = () => {
           {filteredListings.length > 0 ? (
             filteredListings.map((listing) => (
               <div
-                // className="col-lg-4 col-md-6 col-sm-12"
                 className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12"
                 key={listing._id}
               >

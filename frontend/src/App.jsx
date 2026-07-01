@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/check-auth", {
+        const res = await axios.get("https://stay-finder-backend-umber.vercel.app/check-auth", {
           withCredentials: true,
         });
         if (res.data.authenticated) {

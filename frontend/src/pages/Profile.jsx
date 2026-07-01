@@ -29,7 +29,7 @@ const Profile = ({ currUser }) => {
 
         // Fetch User Bookings
         const bookingsRes = await axios.get(
-          "http://localhost:3000/bookings/my-bookings",
+          "https://stay-finder-backend-umber.vercel.app/bookings/my-bookings",
           {
             withCredentials: true,
           }
