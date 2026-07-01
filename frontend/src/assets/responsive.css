@@ -1,0 +1,115 @@
+/* ================= RESPONSIVE ================= */
+
+/* 1. Global Safety: Prevent overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  /* Hide search bar on tablets/phones to save space */
+  .search-form {
+    display: none; 
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar height fix */
+  .navbar {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  /* Filters: Better touch interaction */
+  #filters {
+    gap: 15px;
+    padding: 10px 5px;
+  }
+
+  /* Cards: Maintain aspect ratio */
+  .card-img-top {
+    height: 220px !important;
+  }
+
+  /* Show Page: Responsive image height */
+  .show-img {
+    height: 35vh !important;
+    object-fit: cover; /* Looks better than contain on mobile */
+  }
+  
+  /* Show Page: Reduce padding for smaller screens */
+  .show-card .card-body {
+    padding: 1.5rem !important; 
+  }
+
+  /* Forms: Remove side padding on very small screens */
+  .form-container, .form-page {
+    padding: 0 1rem;
+  }
+  
+  /* Buttons: Stack vertically */
+  .btn1 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Typography scale-down */
+  .hero-title { font-size: 1.8rem; }
+  .hero-text { font-size: 0.95rem; }
+  
+  .card-title { font-size: 1.1rem; }
+  
+  .card-img-top {
+    height: 200px !important;
+  }
+
+  .filter p {
+    font-size: 0.75rem;
+  }
+}
+
+
+/*  RESPONSIVE  */
+
+@media (max-width: 768px) {
+  #filters {
+    gap: 12px;
+  }
+
+  .card-img-top {
+    height: 220px !important;
+  }
+
+  .show-img {
+    height: 35vh;
+  }
+
+  .btn1 {
+    flex-direction: column;
+  }
+  
+  form {
+    padding: 1.5rem;
+  }
+  .search-form {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .search-inp {
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 200px !important;
+  }
+
+  .filter p {
+    font-size: 0.8rem;
+  }
+}
